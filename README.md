@@ -16,3 +16,5 @@ Copyright
 
 This paragraph will be updated later when the repository is populated with
 content.
+
+NOTE: The path to the helpfile(s) used in menu.xml is `/usr/lib/bunsen/bunsen-docs/helpfile-<title>.txt`
