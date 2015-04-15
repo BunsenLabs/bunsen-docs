@@ -1,0 +1,34 @@
+How to edit an Openbox menu
+===========================
+
+*********  It is strongly recommended you make a backup first!  *************
+
+The Openbox menu does not auto-update, it needs to be edited by the user.
+Either edit "~/.config/openbox/menu.xml" using a text editor or use the obconf gui:
+
+    Menu -> Settings -> Openbox -> GUI Menu Editor
+    
+(Links to more detailed info can be found in the Online Help for Openbox in the Help menu)
+
+HowTo edit a BunsenLabs pipemenu
+================================
+
+1)  For the Graphics, Multimedia and Browsers pipemenus:
+    Edit the pipemenu config file, which is "~/config/openbox/pipemenus.rc"
+
+    Add/remove the application you want (NB there needs to be a space between each element).
+    The application name is the same as the package name.
+
+    For example, change the entries in the "Graphics" menu by editing the line:
+
+        GRAPHICS_APPS=( 'mirage' 'gimp' 'blender' 'inkscape' 'mandelbulber' 'viewnior')
+
+OR
+2)  Other menus, eg bl-help-pipemenu, are in "/usr/bin/" and need to be edited as root.
+    Remember that they could be over-written by a BL package upgrade, so you may want to save a backup.
+
+    They have menu entries like:
+
+        menuItem 'Forum Help & Support' 'x-www-browser "http://crunchbang.org/forums/viewtopic.php?id=38737"'
+        
+    The first element is the label, the second is the command to be run
