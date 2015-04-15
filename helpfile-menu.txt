@@ -14,7 +14,7 @@ HowTo edit a BunsenLabs pipemenu
 ================================
 
 1)  For the Graphics, Multimedia and Browsers pipemenus:
-    Edit the pipemenu config file, which is "~/config/openbox/pipemenus.rc"
+    Edit the pipemenu config file, which is "~/.config/openbox/pipemenus.rc"
 
     Add/remove the application you want (NB there needs to be a space between each element).
     The application name is the same as the package name.
