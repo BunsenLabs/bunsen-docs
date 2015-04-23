@@ -32,3 +32,20 @@ OR
         menuItem 'Forum Help & Support' 'x-www-browser "http://crunchbang.org/forums/viewtopic.php?id=38737"'
         
     The first element is the label, the second is the command to be run
+    
+Recent Files Pipemenu
+=====================
+
+Run "bl-recent-files-pipemenu -h" to show the usage of the command.
+
+To change how the menu displays recent files, you can add the following switches
+to the menu.xml pipemenu entry:
+
+-r, --reverse    Put the most-recently used items at the top of the menu
+-l, --limit  NUM     Include up to NUM items in the menu
+
+So to have the most recent 20 items displayed, with the newest first, use:
+
+<menu execute="bl-recent-files-pipemenu -r -l 20" id="pipe-recentfilesmenu" label="Recent Files"/>
+
+
