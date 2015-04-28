@@ -1,5 +1,5 @@
 Source: bunsen-docs
-Section: misc
+Section: doc
 Priority: extra
 Maintainer: John Crawley <john@rafflesnagoya.com>
 Build-Depends: debhelper (>= 9)
