@@ -1,0 +1,15 @@
+Source: bunsen-docs
+Section: misc
+Priority: extra
+Maintainer: John Crawley <john@rafflesnagoya.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: https://github.com/BunsenLabs/bunsen-docs
+Vcs-Git: https://github.com/BunsenLabs/bunsen-docs.git
+Vcs-Browser: https://github.com/BunsenLabs/bunsen-docs.git
+
+Package: bunsen-docs
+Architecture: all
+Depends: ${misc:Depends}
+Description: Documentation for BunsenLabs.
+ Helpfiles and other documentation for BunsenLabs.
