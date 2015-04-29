@@ -1,3 +1,9 @@
+bunsen-docs (0.1-2) unstable; urgency=low
+
+  * Add helpfile-conkyzen.txt
+
+ -- John Crawley <john@rafflesnagoya.com>  Wed, 29 Apr 2015 11:30:46 +0900
+
 bunsen-docs (0.1-1) unstable; urgency=low
 
   * Initial release.
