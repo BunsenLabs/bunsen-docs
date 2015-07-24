@@ -27,6 +27,15 @@ itself to that alternatives group. That job is done by the bl-alternatives
 script which is called automatically by dpkg after each package install.
 (It is very fast and does not significantly slow down the install.)
 
+The applications which can be added by bl-alternatives are:
+bl-file-manager: thunar pcmanfm spacefm nautilus
+bl-text-editor: geany emacs gedit jedit kate leafpad mousepad scite
+bl-image-viewer: mirage eog eom viewnior
+bl-media-player: vlc banshee dragonplayer gnome-mplayer kaffeine parole smplayer totem
+
+You can change these by editing /usr/bin/bl-alternatives,
+or add an app to an alternative group manually (see below).
+
 Editing Alternatives
 ====================
 You can edit any Debian Alternatives (including the bl-* BunsenLabs varieties)
