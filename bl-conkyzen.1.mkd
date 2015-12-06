@@ -1,0 +1,95 @@
+% bl-conkyzen(1) User Manual
+% damo <damo@bunsenlabs.org>
+% Version 8.0
+
+# NAME
+
+bl-conkyzen - manage groups of **conky**(1) instances
+
+# SYNOPSIS
+
+**bl-conkyzen** [*OPTION*]...*FILES*
+
+**bl-conky-session** [*OPTION(S)*]...*FILES*
+
+**bl-conkyedit**
+
+# DESCRIPTION
+
+A "session" is a group of conkys that can be run together: the commands
+to start them are saved in a saved-session file. The menu has an option
+to make a new conky session, and the filepath for the new session is
+entered in a gui text entry dialog box.
+
+All conkys which are found are displayed in a zenity listbox, and
+running conkys are checkmarked. Enter "OK" and all conkys are killed,
+and chosen ones are started, and the commands are saved in the default
+sessionfile.
+
+There are menu options to edit conky config files: choose from all
+conkys, the running conkys, or just the default conky. Multiple conkys
+can be opened for editing at the same time.
+
+# BL-CONKYZEN
+
+This is the main session management script.
+
+## OPTIONS
+
+-h, --help
+:   Display a help message
+
+-f *FILEPATH*, --file *FILEPATH*
+:   File to save the session to
+
+-z, -Z
+:   Show a filepicker for choosing a destination file.  When the dialog
+    opens, any running conkys will be checkmarked.  Click OK and all running
+    conkys are stopped, and all checkmarked conkys are started. To stop a
+    conky just uncheck it, and "OK"
+
+## EXAMPLES
+
+Save session to a new saved-session file with:
+
+    bl-conkyzen -f /path/to/sessionfile
+
+To start the default conky session at login, add the following line to
+autostart:
+
+    (sleep 2s && bl-conky-session --autostart) &
+
+# BL-CONKY-SESSION
+
+Script for handling conky session files.
+
+## OPTIONS
+
+--default *FILEPATH*
+:   Set the default session file
+
+--autostart
+:   No "kill conky" option asked
+
+With no command argument, the script uses the default
+*$CONKYPATH/conky-session* sessionfile
+
+## EXAMPLES
+
+Run specified sessionfile at login:
+
+    bl-conky-session --autostart /path/to/sessionfile
+
+Run default sessionfile, without killing running conkys:
+
+    bl-conky-session --autostart
+
+Run several conky sessionfiles (option to kill conkys first):
+
+    bl-conky-session --default sessionfile1 [sessionfile2..]
+
+# BL-CONKYEDIT
+
+Script to display a listbox with all the conkys. Chosen conky config
+files will open in the default text editor.
+

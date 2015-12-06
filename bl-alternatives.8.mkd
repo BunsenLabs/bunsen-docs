@@ -1,0 +1,97 @@
+% bl-alernatives(8) User Manual
+% John Raff <john@bunsenlabs.org>
+% Version 8.0
+
+# NAME
+
+bl-alternatives - update-alternatives(8) configuration for BunsenLabs
+
+# DESCRIPTION
+
+The "Bunsen Alternatives" are four groups added to the Debian
+alternatives system:
+
+    bl-file-manager
+    bl-text-editor
+    bl-image-viewer
+    bl-media-player
+
+They can be used in menus, keyboard shortcuts, config files and scripts
+just like any other command, and will call up whatever application has
+been set as that alternative. Often the setting will be done
+automatically, but even done manually it only needs to be done once to
+cover all the calls to that command. (See *EDITING ALTERNATIVES* below.)
+
+The default settings in a new install of BunsenLabs are:
+
+`bl-file-manager`
+:   Thunar
+
+`bl-text-editor`
+:   Geany or Leafpad
+
+`bl-image-viewer`
+:   Mirage
+
+`bl-media-player`
+:   VLC
+
+The only difference from the other Debian alternatives is that they are
+not automatically added by packages themselves.  For example, when
+xfce4-terminal is installed, it will add itself to the available options
+for x-terminal-emulator. However, even though pcmanfm is a possible
+alternative for bl-file-manager the pcmanfm package will not add
+itself to that alternatives group. That job is done by the
+bl-alternatives script which is called automatically by dpkg after
+each package install.  (It is very fast and does not significantly
+slow down the install.)
+
+The applications which can be added by bl-alternatives are:
+
+`bl-file-manager`
+:   thunar pcmanfm spacefm nautilus
+
+`bl-text-editor`
+:   geany emacs gedit jedit kate leafpad mousepad scite
+
+`bl-image-viewer`
+:   mirage eog eom viewnior
+
+`bl-media-player`
+:   vlc banshee dragonplayer gnome-mplayer kaffeine parole smplayer totem
+
+You can change these by editing */usr/bin/bl-alternatives*, or add an
+app to an alternative group manually (see below).
+
+# EDITING ALTERNATIVES
+
+You can edit any Debian Alternatives (including the **bl-\*** BunsenLabs
+varieties) with the command **update-alternatives**(8) but there is also a
+graphic front end called `Galternatives` which is easier to use in some
+ways.
+
+In the BunsenLabs menu, click *"System" > "Edit Debian Alternatives"*.
+You can scroll down the list to see what alternative groups have been
+installed on your system, what options are available for each group and
+if there is more than one option you can set a different one.
+
+You can also add a new application to an existing alternative group, so
+if the **bl-alternatives** script has failed to add your favourite image
+viewer to **bl-image-viewer** you can add it manually here.
+
+It is not possible to remove a whole group with galternatives, but you
+can remove an individual option from some group.
+
+These settings are system-wide, affecting all users.  
+
+## PER-USER CHANGES
+
+If you want a local version of bl-file-manager set to eg spacefm, while
+leaving the system setting unchanged, then put a symbolic link called
+**bl-file-manager** in *~/bin* which points to */usr/bin/spacefm*.  If
+*~/bin* is in your `$PATH` and comes before */usr/bin* then your symlink
+will override the system **bl-file-manager**.
+
+# SEE ALSO
+
+**update-alternatives**(8)
