@@ -1,10 +1,11 @@
 "Bunsen Alternatives"
 =====================
 The "Bunsen Alternatives" are four groups added to the Debian Alternatives:
-bl-file-manager
-bl-text-editor
-bl-image-viewer
-bl-media-player
+
+	bl-file-manager
+	bl-text-editor
+	bl-image-viewer
+	bl-media-player
 
 They can be used in menus, keyboard shortcuts, config files and scripts
 just like any other command, and will call up whatever application has been
@@ -13,10 +14,11 @@ even done manually it only needs to be done once to cover
 all the calls to that command. (See "Editing Alternatives" below.)
 
 The default settings in a new install of BunsenLabs are:
-bl-file-manager Thunar
-bl-text-editor Geany or Leafpad
-bl-image-viewer Mirage
-bl-media-player VLC
+	
+	bl-file-manager Thunar
+	bl-text-editor  Geany
+	bl-image-viewer Mirage
+	bl-media-player VLC
 
 The only difference from the other Debian alternatives is that they are
 not automatically added by packages themselves.
@@ -28,10 +30,11 @@ script which is called automatically by dpkg after each package install.
 (It is very fast and does not significantly slow down the install.)
 
 The applications which can be added by bl-alternatives are:
-bl-file-manager: thunar pcmanfm spacefm nautilus
-bl-text-editor: geany emacs gedit jedit kate leafpad mousepad scite
-bl-image-viewer: mirage eog eom viewnior
-bl-media-player: vlc banshee dragonplayer gnome-mplayer kaffeine parole smplayer totem
+
+	bl-file-manager: thunar pcmanfm spacefm nautilus
+	bl-text-editor:  geany emacs gedit jedit kate leafpad mousepad scite
+	bl-image-viewer: mirage eog eom viewnior
+	bl-media-player: vlc banshee dragonplayer gnome-mplayer kaffeine parole smplayer totem
 
 You can change these by editing /usr/bin/bl-alternatives,
 or add an app to an alternative group manually (see below).
