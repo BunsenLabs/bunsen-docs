@@ -2,7 +2,7 @@ Source: bunsen-docs
 Section: doc
 Priority: extra
 Maintainer: John Crawley <john@bunsenlabs.org>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9), pandoc, make
 Standards-Version: 3.9.5
 Homepage: https://github.com/BunsenLabs/bunsen-docs
 Vcs-Git: https://github.com/BunsenLabs/bunsen-docs.git
