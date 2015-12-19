@@ -1,3 +1,9 @@
+bunsen-docs (8.0.1-1) bunsen-hydrogen; urgency=low
+
+  * helpfile-bl-alternatives.txt: Update alternative apps lists.
+
+ -- John Crawley <john@bunsenlabs.org>  Sat, 19 Dec 2015 12:10:31 +0900
+
 bunsen-docs (8.0-1) bunsen-hydrogen; urgency=low
 
   * Update version to release numbering.

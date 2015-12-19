@@ -28,10 +28,13 @@ script which is called automatically by dpkg after each package install.
 (It is very fast and does not significantly slow down the install.)
 
 The applications which can be added by bl-alternatives are:
-bl-file-manager: thunar pcmanfm spacefm nautilus
-bl-text-editor: geany emacs gedit jedit kate leafpad mousepad scite
-bl-image-viewer: mirage eog eom viewnior
-bl-media-player: vlc banshee dragonplayer gnome-mplayer kaffeine parole smplayer totem
+bl-file-manager: thunar caja nautilus pcmanfm spacefm xfe
+bl-text-editor: geany emacs gedit jedit kate leafpad medit mousepad scite
+bl-image-viewer: mirage eog eom gpicview viewnior
+bl-media-player: vlc banshee dragonplayer gnome-mplayer gxine kaffeine parole smplayer totem
+
+Note: gvim is also an option for bl-text-editor, but
+ is handled specially (wrapper and man page names differ).
 
 You can change these by editing /usr/bin/bl-alternatives,
 or add an app to an alternative group manually (see below).
