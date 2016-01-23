@@ -1,3 +1,9 @@
+bunsen-docs (8.0.2-1) bunsen-hydrogen; urgency=low
+
+  * Damo: improve formatting and replace zenity with yad.
+
+ -- John Crawley <john@bunsenlabs.org>  Sat, 23 Jan 2016 12:58:56 +0900
+
 bunsen-docs (8.0.1-1) bunsen-hydrogen; urgency=low
 
   * helpfile-bl-alternatives.txt: Update alternative apps lists.
