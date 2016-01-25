@@ -1,3 +1,9 @@
+bunsen-docs (8.0.2-2) bunsen-hydrogen; urgency=low
+
+  * debian/copyright: Update year.
+
+ -- John Crawley <john@bunsenlabs.org>  Mon, 25 Jan 2016 13:36:55 +0900
+
 bunsen-docs (8.0.2-1) bunsen-hydrogen; urgency=low
 
   * Damo: improve formatting and replace zenity with yad.
