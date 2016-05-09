@@ -1,3 +1,9 @@
+bunsen-docs (8.1-2) bunsen-hydrogen; urgency=medium
+
+  * Add symlink to /usr/share/bunsen/docs from old /usr/share/bunsen/bunsen-docs
+
+ -- John Crawley <john@bunsenlabs.org>  Mon, 09 May 2016 11:06:19 +0900
+
 bunsen-docs (8.1-1) bunsen-hydrogen; urgency=medium
 
   * Change install path to /usr/share/bunsen/docs
