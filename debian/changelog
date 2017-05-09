@@ -1,3 +1,9 @@
+bunsen-docs (9.0-1) helium; urgency=medium
+
+  * Version bump for helium.
+
+ -- John Crawley <john@bunsenlabs.org>  Tue, 09 May 2017 17:04:09 +0900
+
 bunsen-docs (8.1-2) bunsen-hydrogen; urgency=medium
 
   * Add symlink to /usr/share/bunsen/docs from old /usr/share/bunsen/bunsen-docs
