@@ -5,7 +5,7 @@ How to edit an Openbox menu
 
 The Openbox menu does not auto-update, it needs to be edited by the user.
 
-Either edit "~/.config/openbox/menu.xml" using a text editor or use the obconf gui:
+Either edit "~/.config/openbox/menu.xml" using a text editor or use the obmenu gui:
 
     Menu -> Settings -> Openbox -> GUI Menu Editor
     
