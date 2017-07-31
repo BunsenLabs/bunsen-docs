@@ -1,9 +1,8 @@
-  
   CONFIGURATION of the bl-exit dialog window:
   ------------------------------------------
   
   The installed bl-exit configuration is set by '/etc/bl-exit/bl-exitrc'
-  
+
     WARNING:  Do not overwrite this file. It is a Debian conf file and 
     may be changed by the package manager when a new version of 
     bunsen-utilities is released.
@@ -43,11 +42,11 @@
   -------------------------
   
   STYLE:  When the [style] section is not present or the combination of the values of 
-  options 'dir' and 'rcfile' point to a non-existent file, the buttons will take colors 
-  from the active gtk theme.
+  options 'dir' and 'rcfile' point to a non-existent file, the buttonbox will have the
+  usual GTK buttons, and will take colors from the active gtk theme.
   
   EDIT:  To switch to the classic button layout, you can change the 'theme' entry in the 
-    [theme] section to 'classic' (this is the installed default).
+    [theme] section to 'classic'.
   
     [style]
     dir = styles
@@ -62,7 +61,7 @@
   ----------------------
   
   ICONS:  Icon images are installed in '/usr/share/images/bunsen/exit/dark' and 
-  '/usr/share/images/bunsen/exit/light'.
+           '/usr/share/images/bunsen/exit/light'.
   
   There are large (100px) icons named eg. 'cancel.png', and small (60px) versions named eg. 'cancel-sm.png'.
   
@@ -81,14 +80,18 @@
      use any directory for any theme, by editing the 'iconpath' configuration
      option for that theme.
      
-  THEMES:  The height of the bl-exit window will not be displayed less than the icon height, 
-    but icons will overlap if the width is scaled too small.
+  THEMES:  Do not leave values empty - the script will fail.
+
+     The height of the bl-exit window will not be displayed less than the icon height. 
+     If the scale factor is set too small, the window will be set to the minimum required so
+     that the icons do not overlap. If set too large it will be set to the screenwidth.
+     There is a fallback size of 800px if the scale is 0 or negative.      
   
-    #Overall height of the dialog.
-    dialogHeight=px
+     #Overall height of the dialog.
+     dialogHeight=px
     
-    # windowWidthAdjustment - scale factor for window width ( 0 = default,800px;1 = full screen width)
-    windowWidthAdjustment=0.5
+     # windowWidthAdjustment - scale factor for window width ( 0 = default,800px;1 = full screen width)
+     windowWidthAdjustment=0.5
   
   STYLES:  To use custom styles, you MUST
   
@@ -101,7 +104,7 @@
     
   EXAMPLES: 
   
-  1) Use the "Classic" gtk window buttons and colour style (the default):
+  1) Use the "Classic" gtk window buttons and colour style:
   
     [style]
     dir = styles
@@ -110,7 +113,7 @@
     [theme]
     # set the theme
     theme = classic
-  
+ 
   2) Use the helium layout (small icons) and colour style:
   
     [style]
