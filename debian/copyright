@@ -4,7 +4,7 @@ Source: https://github.com/BunsenLabs/bunsen-docs
 
 Files: *
 Copyright: 2015-2016 John Crawley <john@bunsenlabs.org>
-           2015-2016 damo <damo@bunsenlabs.org>
+           2015-2017 damo <damo@bunsenlabs.org>
 License: GPL-3.0+
 
 Files: debian/*
