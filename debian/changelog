@@ -1,3 +1,9 @@
+bunsen-docs (9.1-4) helium; urgency=high
+
+  * Add helpfile-bl-exit.txt to install, rationalize source directory structure.
+
+ -- John Crawley <john@bunsenlabs.org>  Sun, 25 Feb 2018 11:02:55 +0900
+
 bunsen-docs (9.1-3) helium; urgency=medium
 
   * Change package Priority from deprecated 'extra' to 'optional'.
