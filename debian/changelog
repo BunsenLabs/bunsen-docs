@@ -1,3 +1,12 @@
+bunsen-docs (10.0-1) lithium; urgency=medium
+
+  * Migrate to Lithium repository.
+  * Upgrade standards version to 4.3.0, debhelper compat to 10.
+  * Update copyright year.
+  * debian/rules: Remove comments.
+
+ -- John Crawley <john@bunsenlabs.org>  Fri, 04 Jan 2019 17:44:00 +0900
+
 bunsen-docs (9.1-4) helium; urgency=high
 
   * Add helpfile-bl-exit.txt to install, rationalize source directory structure.
