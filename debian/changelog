@@ -1,3 +1,9 @@
+bunsen-docs (10.1-1) lithium; urgency=medium
+
+  * Update some helpfiles, remove obsolete bl-exit helpfile.
+
+ -- John Crawley <john@bunsenlabs.org>  Fri, 08 Nov 2019 16:43:20 +0900
+
 bunsen-docs (10.0-1) lithium; urgency=medium
 
   * Migrate to Lithium repository.
