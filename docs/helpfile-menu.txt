@@ -1,3 +1,19 @@
+How to edit a jgmenu menu
+=========================
+
+*********  It is strongly recommended you make a backup first!  *************
+
+The "Applications" submenu is auto-updating,
+but other parts of the menu are static, except for pipemenus..
+
+Edit "~/.config/jgmenu/prepend.csv in a text editor.
+
+The basic syntax is very simple:
+
+	label,command
+	
+See 'man jgmenu' for details.
+
 How to edit an Openbox menu
 ===========================
 
@@ -5,9 +21,7 @@ How to edit an Openbox menu
 
 The Openbox menu does not auto-update, it needs to be edited by the user.
 
-Either edit "~/.config/openbox/menu.xml" using a text editor or use the obmenu gui:
-
-    Menu -> Settings -> Openbox -> GUI Menu Editor
+Edit "~/.config/openbox/menu.xml" using a text editor.
     
 (Links to more detailed info can be found in the Online Help for Openbox in the Help menu)
 
@@ -15,20 +29,7 @@ Either edit "~/.config/openbox/menu.xml" using a text editor or use the obmenu g
 HowTo edit a BunsenLabs pipemenu
 ================================
 
-1)  For the Graphics, Multimedia and Browsers pipemenus:
-
-    Edit the pipemenu config file, which is "~/.config/openbox/pipemenus.rc"
-
-    Add/remove the application you want (NB there needs to be a space between each element).
-    The application name is the same as the package name.
-
-    For example, change the entries in the "Graphics" menu by editing the line:
-
-        GRAPHICS_APPS=( 'mirage' 'gimp' 'blender' 'inkscape' 'mandelbulber' 'viewnior')
-
-OR
-
-2)  Other menus, eg bl-help-pipemenu, are in "/usr/bin/"
+    Menus, eg bl-help-pipemenu, are in "/usr/bin/"
 
  *** Remember that they could be over-written by a BL package upgrade, 
 	 so use the following method instead of editing the file as root ***
@@ -37,11 +38,32 @@ OR
 	2) Check ~/bin comes first in $PATH (use 'echo $PATH' to check)
 	3) Edit the local file
 
+jgmenu can use xml pipemenus written for Openbox, or csv pipemenus.
+
+*)  CSV pipemenus output csv code which can be used directly by jgmenu.
+    These will run faster and more reliably (but the xml menus written 
+    for Openbox will also run fine in jgmenu).
+    
+    CSV pipemenus use the menu generation functions provided in
+    /usr/lib/bunsen/common/bl-includes and have entries like:
+    
+    	jgmenuItem 'takescrot' "scrot Now" "scrot $IMG -e $VIEW"
+
+    The first element is a tag indicating which submenu the item goes in,
+    tag "root" means the root menu. The second is the label,
+    the third is the command to run.
+
+
+*) XML pipemenus output xml menus which can be used by Openbox or jgmenu.
+
 	They have menu entries like:
 
         menuItem 'Forum Basic Help & Support' 'x-www-browser "https://forums.bunsenlabs.org/viewforum.php?id=2"'
         
-    The first element is the label, the second is the command to be run
+    The first element is the label, the second is the command to be run.
+    
+Please see the first section of /usr/lib/bunsen/common/bl-includes
+for all the menu generation functions, both jgmenu and openbox.
     
 Recent Files Pipemenu
 =====================

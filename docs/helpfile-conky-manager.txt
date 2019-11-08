@@ -1,13 +1,13 @@
 BunsenLabs Conky Manager scripts
 ================================
 
-A "session" is a group of conkys that can be run together: the commands 
+A "session" is a group of conkys that can be run together: the commands
 to start them are saved in a saved-session file. The menu has an option
 to make a new conky session, and the filepath for the new session is entered
 in a gui text entry dialog box.
 
-All conkys which are found are displayed in a yad dialog listbox, and running 
-conkys are checkmarked. Enter "OK" and all conkys are killed, and chosen ones 
+All conkys which are found are displayed in a yad dialog listbox, and running
+conkys are checkmarked. Enter "OK" and all conkys are killed, and chosen ones
 are started, and the commands are saved in the default sessionfile.
 
 There are menu options to edit conky config files: choose from all conkys,
@@ -15,11 +15,11 @@ the running conkys, or just the default conky. Multiple conkys can be opened
 for editing at the same time.
 
 
-bl-conkyzen
-===========
+bl-conky-manager
+================
 The main script
 
-USAGE:  bl-conkyzen [OPTION]...FILES
+USAGE:  bl-conky-manager [OPTION]...FILES
 
     With no command option the script runs the gui
 
@@ -35,14 +35,14 @@ USAGE:  bl-conkyzen [OPTION]...FILES
 EXAMPLES:
     Save session to a new saved-session file with:
 
-        bl-conkyzen -f sessionfile-name
+        bl-conky-manager -f sessionfile-name
 
     To start the default conky session at login, add the
     following line to autostart:
 
         (sleep 2s && bl-conky-session --autostart) &
-        
-        
+
+
 bl-conky-session
 ================
 Script to handle the sessionfiles
@@ -66,8 +66,8 @@ EXAMPLES:
 
     Run several conky sessionfiles (option to kill conkys first):
     "bl-conky-session --default sessionfile1 sessionfile2 etc"
-    
-    
+
+
 bl-conkyedit
 ============
 Script to display a listbox with all the conkys available for editing.
