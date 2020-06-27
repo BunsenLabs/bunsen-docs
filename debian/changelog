@@ -1,3 +1,9 @@
+bunsen-docs (10.1.1-1) lithium; urgency=medium
+
+  * Restore bl-exit helpfile, notated for legacy bl-exit.
+
+ -- John Crawley <john@bunsenlabs.org>  Sat, 27 Jun 2020 16:55:03 +0900
+
 bunsen-docs (10.1-1) lithium; urgency=medium
 
   * Update some helpfiles, remove obsolete bl-exit helpfile.
