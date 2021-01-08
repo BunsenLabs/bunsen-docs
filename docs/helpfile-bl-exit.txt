@@ -2,7 +2,7 @@
   ===========
 
   The default BunsenLabs bl-exit is now a script-based application using yad, and
-  no configuration is possible, beyond changing the default icon theme.
+  no configuration is possible, although it will respect the current GTK and icon theme.
 
 
   bunsen-exit-python
