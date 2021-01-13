@@ -1,3 +1,9 @@
+bunsen-docs (10.1.2-1) lithium; urgency=medium
+
+  * helpfile-bl-exit.txt: add comment about theme.
+
+ -- John Crawley <john@bunsenlabs.org>  Wed, 13 Jan 2021 17:34:30 +0900
+
 bunsen-docs (10.1.1-1) lithium; urgency=medium
 
   * Restore bl-exit helpfile, notated for legacy bl-exit.
