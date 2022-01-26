@@ -1,3 +1,12 @@
+bunsen-docs (11.1-1) beryllium; urgency=medium
+
+  * Add helpfiles for BLOB and the BL autostart file.
+  * Update the conky helpfile to match recent script changes and add tint2 info.
+  * Remove the bl-exit helpfile as bl-exit-python is no longer available.
+  * Provide the jgmenu help menu include in this package, not in bunsen-configs.
+
+ -- John Crawley <john@bunsenlabs.org>  Wed, 26 Jan 2022 14:38:06 +0900
+
 bunsen-docs (11.0-1) beryllium; urgency=medium
 
   * Migrate for Debian Bullseye.
