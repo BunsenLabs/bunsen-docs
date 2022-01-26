@@ -1,0 +1,210 @@
+BunsenLabs Conky and Tint2 Management
+=====================================
+
+BunsenLabs provides a number of tools to make using conky and tint2 easier.
+
+Conky
+=====
+
+Many people like to run several conkys at the same time in their desktop session.
+A Conky "session" makes this easy to organize with a "conky sessionfile"
+ - a text file holding a list of conky config files' paths, something like this:
+
+.config/conky/First-conky.conf
+.config/conky/possible_subdir/Second-conky.conf
+
+(Paths can be absolute or relative - see bl-conky-session below.)
+
+It is possible to have several alternative conky sessionfiles.
+When a user logs in, the default conky session ~/.config/conky/conky-startup-session is run.
+This is a symlink which points, by default, to ~/.config/conky/conky-sessionfile,
+but can easily be changed to point to a different sessionfile, so that will be used on login.
+It is also easy to switch from one conky session to another during a desktop session.
+
+
+The Conky Pipemenu
+==================
+
+Menu > Preferences > Conky
+
+Items:
+    "Conky Manager": You can choose conkys to run from all those available.
+    See "bl-conky-manager" below.
+
+    "Edit Conkys": Choose a conky config to edit. There are menu options to
+    choose from all conkys, the running conkys, or just the default conky.
+    See "bl-conky-edit" below.
+
+    "Move a Conky": move any currently visible conky to a new place on the desktop.
+    See "bl-conkymove" below.
+
+    "Reload Startup Session": conkys are reset to those in the startup sessionfile.
+    See "bl-conky-session" below.
+
+    "New Conky Session": choose a new session name and choose the conkys to run.
+    (Empty sessions are possible too.)
+
+    "Saved Sessions": if more than one sessionfile exists, choose one to run.
+
+    "Choose Startup Session": the startup symlink mentioned above is changed to
+    point to the chosen sessionfile.
+
+    "Conky Manager Help": open this document.
+
+
+bl-conky-manager
+================
+
+From menu: Preferences > Conky > Conky Manager
+
+From terminal: bl-conky-manager
+    Options:
+        -h,--help : show help message
+        -f,--file <FILENAME> : specify file to save session to
+        -z,--choose-sessfile : run gui filename entry dialog for new saved session
+        -s,--choose-startup  : choose session file to run at startup
+
+All available conky config files in ~/.config/conky are shown with checkboxes.
+Those currently running are shown checked.
+Check the ones you want to run, uncheck the ones to stop, and click "Apply".
+Your chosen conky session will be saved to the default startup sessionfile.
+
+If you have chosen to create a new session the selected conkys will be saved there instead.
+
+If you choose to start a conky which is not "sticky",
+you will be prompted to choose which desktop to launch it on.
+The desktop will be saved in the sessionfile (see bl-conky-session below).
+
+NOTE: Although the conky session manager allows conkys to be anywhere in $HOME,
+the conky manager only handles conkys which are in ~/.config/conky.
+
+
+bl-conky-edit
+=============
+
+From menu: Preferences > Conky > Edit Conkys > Conky Editor
+
+From terminal: bl-conky-edit
+    Options:
+        -h,--help : show help message
+
+As with bl-conky-manager, a listbox with all the conkys available will be shown for editing.
+Chosen conky config files will open in the default text editor.
+Multiple conkys can be opened for editing at the same time.
+
+
+bl-conkymove
+============
+
+From menu: Preferences > Conky > Move a Conky
+
+From terminal: bl-conkymove
+    Options:
+        -h,--help : show help message
+
+You will be invited to click on a conky to identify it, then Alt+LeftMouse drag it
+to its new position. The new position will be written to the conky config file.
+
+
+bl-conky-session
+================
+
+From menu: Preferences > Conky >
+    "Reload Startup Session", "New Conky Session", "Saved Sessions" and "Choose Startup Session"
+    all use bl-conky session. ("Choose Startup Session" uses bl-conky-manager too.)
+
+From terminal: bl-conky-session
+    Options:
+        -h,--help : show help message
+        <no argument> : run the default startup sessionfile
+        <filepath1> [<filepath2>...] : run all these sessionfiles
+        --default : add the default startup sessionfile to the list to run
+        --kill-running : kill current running conkys without prompting
+        --set-startup <file> : set <file> as default startup sessionfile
+            (Use "default" to reset startup session to conky-sessionfile.)
+        --list : list available session files
+
+Conky sessionfile paths can be absolute (start with /) or relative to ~/.config/conky,
+The conky paths inside the sessionfiles can be absolute, relative to ~/.config/conky or relative to ~/.
+(~/.config/conky will be checked first)
+
+Conkys are usually configured as "sticky" so they run on all desktops simultaneously,
+but can also be set in the sessionfile to run on one desktop only.
+For example, such an entry to run a conky on Desktop 1 would look like this:
+
+D[1] .config/conky/possible_subdir/MySpecial-conky.conf
+
+(Desktop numbering starts at 0)
+
+
+Tint2
+=====
+
+There is a smaller set of tint2 management tools, and they work like the conky tools.
+
+
+The tint2 pipemenu
+==================
+
+Menu > Preferences > Tint2
+
+Items:
+    "Tint2 Manager": shows a checkbox list like the conky manager.
+
+    "Restart Tint2": kill all running tint2 instances and restart them with the same arguments
+
+    "Reload Default Session": kill tint2s and reload the default ~/.config/tint2/tint2-sessionfile
+
+    "Edit tint2s": the same options as for conky
+
+
+bl-tint2-manager
+================
+
+From menu: Preferences > Tint2 > Tint2 Manager
+
+From terminal: bl-tint2-manager
+    Options:
+        -h,--help : show help message
+
+The tint2 manager displays tint2 files inside ~/.config/tint2 which can be
+checked or unchecked as with the conky manager.
+
+Only the default ~/.config/tint2/tint2-sessionfile is used.
+
+
+bl-tint2-edit
+=============
+
+From menu: Preferences > Tint2 > Edit Tint2s > Tint2 Editor
+
+From terminal: bl-tint2-edit
+    Options:
+        -h,--help : show help message
+
+A listbox with all the tint2s available will be shown for editing, as with conky.
+
+
+bl-tint2-session
+================
+
+From menu: Preferences > Tint2 > Reload Default Session
+
+From terminal: bl-tint2-session
+    Options:
+        -h,--help : show help message
+
+Tint2 sessionfile paths can be absolute (start with /) or relative to ~/.config/tint2,
+The tint2 paths inside the sessionfiles can be absolute, relative to ~/.config/tint2 or relative to ~/.
+(~/.config/tint2 will be checked first)
+
+When called, bl-tint2-session will kill any running tint2s and start those
+which are written in the default tint2 sessionfile ~/.config/tint2/tint2-sessionfile
+
+If any sessionfiles are passed as arguments they will be loaded instead of the default.
+Multiple sessionfiles can be loaded.
+
+There is no support for setting a specific desktop with tint2.
+
+
+Conky and Tint2 sessionfiles can be edited by hand as well as via the GUI tools.

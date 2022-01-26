@@ -1,0 +1,124 @@
+BLOB - The BunsenLabs theme management script
+=============================================
+
+bl-obthemes is a script to save or restore gui theme settings,
+ from a graphical user interface based on yad.
+
+To launch from the BL Menu: Utilities -> BLOB Themes Manager
+
+To launch from a terminal: bl-obthemes [-h|--help][-v|--verbose]
+Optional arguments:
+        -h, --help      show a help message
+        -v, -d, --verbose, --debug   describe actions being performed
+No other CLI options are supported, and the user interface remains graphic.
+
+
+The initial BLOB window
+=======================
+
+Options:
+    "Save Settings": The current theme settings of important applications will be saved
+    to a directory in ~/.config/blob, with a name of your choosing.
+
+    "View Saved": The saved theme collections ("blobs") will be shown,
+    and you can choose one to restore. Some blobs come pre-installed for you to try,
+    others will be added by you.
+
+    "Help": Show this document.
+
+    "Close": Exit BLOB.
+
+
+Save options
+============
+
+When you have set up the looks of your desktop and windows how you like them,
+all the settings can be saved as a single collection for future restoration.
+
+After choosing a name for the new "blob", you can check over the list of
+configurations to be saved:
+
+            Openbox theme
+
+            GTK theme including Icon theme
+
+            Background
+            (uses Nitrogen or feh, depending which has the newer saved bg config file)
+
+            Running Conky(s)
+
+            Running Tint2(s)
+
+            Alt Menu (dmenu)
+
+            Lightdm login gtk greeter
+
+            X config (.Xresources)
+
+            Bash config (.bashrc)
+
+            Compositor settings
+
+            jgmenu settings
+
+            Terminal emulator config (if available)
+
+Everything will be saved to the new blob, but on restoring you can choose which configs to restore.
+
+A screenshot is stored with each blob, so you can remember what it looks like.
+    (Windows are hidden briefly so the image is the bare desktop, with any Tint2s
+    or Conkys which are running, and a representive menu and window open.)
+
+
+Restore Options
+===============
+
+Open the "View Saved" window to see what blobs are available to restore.
+
+Options:
+    "View Image": see the screenshot close up.
+
+    "Add New": the "Save Settings" dialogue.
+
+    "Restore": restore the selected blob.
+
+    etc.
+
+Several blobs are shipped with Bunsenlabs, so you can try some alternative desktop appearances.
+The current default desktop is also available as "Beryllium" in case you want to come back.
+
+If some of your configs are different from when your last blob was saved,
+they will be overwitten when restoring a different blob.
+This situation is detected, and you can save your current desktop before continuing,
+if you want. You can view file differences before deciding.
+
+When you restore a blob, you can choose which specific configs you want to restore.
+Others will be left as they are now.
+
+
+Configuration
+=============
+
+Some variables at the top of the script can be adjusted to suit your needs.
+Copy /usr/bin/bl-obthemes to ~/bin, and edit your local copy.
+Make sure it is the new default by running 'which bl-obthemes'.
+
+ USER VARIABLE: xdotool is used to move the mouse pointer, and assumes the
+ root-menu is shown with "Super + Space" keys, and the right mouse button is
+ set for "r-click". If you have set these to something else, then edit the
+ "MENUMODIFIER" variable and "MOUSECMD" array.
+ Set the variable "KEYDOWN" to where "Preferences" is in the root-menu (or
+ anything else you might want displayed).
+ The image viewer is set to be "bl-image-viewer". Edit the "IMGCMD" variable
+ to change this.
+
+WARNING:
+ Conkys in non-default directories are saved,
+ but will not be seen when running the bl conky manager.
+
+KNOWN ISSUES:
+ Virtualbox does not allow the guest to move the host mouse cursor,
+ using xdotool, so the screenshot may produce an incorrect theme displayed
+ and/or poor positioning.
+ A workaround is to move the cursor to some free space, and use
+ the "Enter" key in the "Configurations to be saved:" dialog.

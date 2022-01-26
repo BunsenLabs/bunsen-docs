@@ -1,4 +1,8 @@
-usr/share/bunsen/docs/helpfile-menu.txt usr/share/doc/bunsen-docs/helpfile-menu.txt
-usr/share/bunsen/docs/helpfile-conkyzen.txt usr/share/doc/bunsen-docs/helpfile-conkyzen.txt
-usr/share/bunsen/docs/helpfile-bl-alternatives.txt usr/share/doc/bunsen-docs/helpfile-bl-alternatives.txt
+usr/share/bunsen/docs/helpfiles/helpfile-bl-alternatives.txt usr/share/doc/bunsen-docs/helpfile-bl-alternatives.txt
+usr/share/bunsen/docs/helpfiles/helpfile-blautostart.txt usr/share/doc/bunsen-docs/helpfile-blautostart.txt
+usr/share/bunsen/docs/helpfiles/helpfile-bl-exit.txt usr/share/doc/bunsen-docs/helpfile-bl-exit.txt
+usr/share/bunsen/docs/helpfiles/helpfile-blob.txt usr/share/doc/bunsen-docs/helpfile-blob.txt
+usr/share/bunsen/docs/helpfiles/helpfile-conkytint2-manager.txt usr/share/doc/bunsen-docs/helpfile-conkytint2-manager.txt
+usr/share/bunsen/docs/helpfiles/helpfile-menu.txt usr/share/doc/bunsen-docs/helpfile-menu.txt
+
 usr/share/bunsen/docs usr/share/bunsen/bunsen-docs

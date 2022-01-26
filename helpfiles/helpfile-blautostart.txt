@@ -1,0 +1,62 @@
+BunsenLabs Autostart
+===================
+
+The X session and BunsenLabs session
+====================================
+
+When you log in to an X session, a "session manager" is chosen from the
+.desktop files in /usr/share/xsessions to start a window manager and other processes needed.
+With simple systems like BunsenLabs it's usual to have a user "autostart" file to run
+things like desktop panels and utilities.
+
+The BL session manager 'bunsenlabs-session' runs a window manager (openbox by default),
+sets openbox to use ~/.config/openbox/bl-rc.xml as its config file,
+and runs the user autostart file ~/.config/bunsen/autostart.
+
+SEE ALSO: 'man bunsenlabs-session', 'man openbox-session', 'man openbox', 'man xsession'
+BL forum thread on 'startx': https://forums.bunsenlabs.org/viewtopic.php?id=3774
+
+
+The BunsenLabs autostart file
+=============================
+
+~/.config/bunsen/autostart
+
+This script is run after the window manager has started up.
+
+All lines are treated as normal shell commands and can be
+changed by users to set up their desktop session as they want.
+
+The comments should help, but note:
+
+1) This will be run by the default shell 'sh' which in Debian is dash, not bash,
+so only basic shell commands will work.
+
+2) Commands which start long-running processes should be "forked" with an ampersand
+or else the autostart script will stop at that line till the process ends, eg:
+pnmixer &
+Commands which return quickly do not need this, eg:
+xset b off
+
+3) There is a section in the middle where certain lines only apply for a particular window manager.
+The openbox section is complete, but the XFCE and Awesome Window Manager clauses
+are just suggestions. If you want to use a different window manager, change the
+window_manager=openbox
+line near the top of the file to whatever you want to use, eg
+window_manager=awesome
+(Use the actual command which launches the window manager, not its name, if different.)
+Then make a new clause in the 'case $window_manager in...' section to call the apps you will need.
+
+4) Many applications use the xdg autostart mechanism based on
+.desktop files in /etc/xdg/autostart and ~/.config/autostart.
+
+The last line in the BunsenLabs autostart file:
+bl-xdg-autostart
+will start up the appropriate .desktop files for you.
+If you would prefer to ignore the xdg autostart and start all applications manually,
+comment out that line and add the necessary commands to your autostart file instead.
+
+NOTE: Openbox and desktop environments like Gnome or XFCE will also invoke the same xdg autostart.
+
+SEE ALSO: 'man bl-xdg-autostart'
+Arch Wiki on XDG Autostart: https://wiki.archlinux.org/title/XDG_Autostart

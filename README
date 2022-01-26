@@ -3,7 +3,7 @@ BunsenLabs Documentation
 
 This repository holds documentation that is featured on a Bunsen Labs installation.
 
-NOTE: The path to the helpfile(s) used in menus is /usr/share/bunsen/docs/helpfile-[title].txt
+NOTE: The path to the helpfile(s) used in menus is /usr/share/bunsen/docs/helpfiles/helpfile-[title].txt
 
 Copyright
 ---------

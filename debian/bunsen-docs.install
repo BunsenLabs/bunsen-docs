@@ -1,1 +1,2 @@
-docs usr/share/bunsen
+helpfiles usr/share/bunsen/docs
+menu-includes usr/share/bunsen/docs
