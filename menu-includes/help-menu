@@ -59,14 +59,14 @@ Tint2 Wiki: FAQ,x-www-browser "https://gitlab.com/o9000/tint2/wikis/FAQ"
 Tint2 Wiki: Configuration,x-www-browser "https://gitlab.com/o9000/tint2/blob/master/doc/tint2.md"
 Tint2 Forum Thread,x-www-browser "https://forums.bunsenlabs.org/viewtopic.php?id=254"
 Tint2 man page,x-terminal-emulator -T "Tint2 man page" -e man tint2
-Conky &amp; Tint2 Manager Help,yad --button="OK":0 --center --window-icon=distributor-logo-bunsenlabs --text-info --title="Conky & Tint2 Manager Help" --filename="/usr/share/bunsen/docs/helpfile-conkytint2-manager.txt" --width=900 --height=700 --fontname=Monospace
+Conky &amp; Tint2 Manager Help,yad --button="OK":0 --center --window-icon=distributor-logo-bunsenlabs --text-info --title="Conky & Tint2 Manager Help" --filename="/usr/share/bunsen/docs/helpfiles/helpfile-conkytint2-manager.txt" --width=900 --height=700 --fontname=Monospace
 
 ^tag(ConkyWWW)
 Back,^back()
 Conky Wiki,x-www-browser "https://github.com/brndnmtthws/conky/wiki"
 Conky Archive,x-www-browser "https://web.archive.org/web/20160325091248/https://crunchbang.org/forums/viewtopic.php?pid=371424"
 Conky man pages,x-terminal-emulator -T "Conky man page" -e man conky
-Conky &amp; Tint2 Manager Help,yad --button="OK":0 --center --window-icon=distributor-logo-bunsenlabs --text-info --title="Conky & Tint2 Manager Help" --filename="/usr/share/bunsen/docs/helpfile-conkytint2-manager.txt" --width=900 --height=700 --fontname=Monospace
+Conky &amp; Tint2 Manager Help,yad --button="OK":0 --center --window-icon=distributor-logo-bunsenlabs --text-info --title="Conky & Tint2 Manager Help" --filename="/usr/share/bunsen/docs/helpfiles/helpfile-conkytint2-manager.txt" --width=900 --height=700 --fontname=Monospace
 
 ^tag(ThemesWWW)
 Back,^back()
