@@ -30,7 +30,7 @@ Bunsen Help Files,^checkout(BLhelp)
 ^tag(DebianWWW)
 Back,^back()
 Debian Documentation,x-www-browser "https://www.debian.org/doc/"
-Debian Handbook,x-www-browser "https://debian-handbook.info/browse/bullseye/"
+Debian Handbook,x-www-browser "https://debian-handbook.info/browse/stable/"
 Debian Reference,x-www-browser "https://www.debian.org/doc/manuals/debian-reference/"
 Wiki,x-www-browser "https://wiki.debian.org/"
 FAQsFromDebianUser,x-www-browser "https://wiki.debian.org/FAQsFromDebianUser"
