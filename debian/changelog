@@ -1,3 +1,9 @@
+bunsen-docs (11.2-1) beryllium; urgency=medium
+
+  * Update help menu.
+
+ -- John Crawley <john@bunsenlabs.org>  Wed, 12 Oct 2022 16:54:36 +0900
+
 bunsen-docs (11.1-1) beryllium; urgency=medium
 
   * Add helpfiles for BLOB and the BL autostart file.
