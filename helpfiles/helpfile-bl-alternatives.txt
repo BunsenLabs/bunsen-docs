@@ -69,4 +69,4 @@ will override the system bl-file-manager.
 
 See 'man update-alternatives' for details of the Debian Alternatives.
 Or here:
-https://www.debian-administration.org/article/91/Using_the_Debian_alternatives_system
+https://wiki.debian.org/DebianAlternatives
