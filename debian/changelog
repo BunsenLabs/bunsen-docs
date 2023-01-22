@@ -1,3 +1,13 @@
+bunsen-docs (12.0-1) boron; urgency=medium
+
+  * Migrate for Debian Bookworm
+    - debian/control: Bump Standards-Version to 4.6.1.0 - no changes required.
+    - debian/control: Declare debhelper compatibility 13.
+    - debian/control: Add Rules-Requires-Root: no
+    - debian/copyright: update year, use https Format url.
+
+ -- John Crawley <john@bunsenlabs.org>  Sun, 22 Jan 2023 11:29:13 +0900
+
 bunsen-docs (11.2-1) beryllium; urgency=medium
 
   * Update help menu.
