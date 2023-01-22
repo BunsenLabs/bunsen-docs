@@ -2,8 +2,9 @@ Source: bunsen-docs
 Section: doc
 Priority: optional
 Maintainer: John Crawley <john@bunsenlabs.org>
-Build-Depends: debhelper-compat (= 12)
-Standards-Version: 4.5.1
+Build-Depends: debhelper-compat (= 13)
+Rules-Requires-Root: no
+Standards-Version: 4.6.1.0
 Homepage: https://github.com/BunsenLabs/bunsen-docs
 Vcs-Git: https://github.com/BunsenLabs/bunsen-docs.git
 Vcs-Browser: https://github.com/BunsenLabs/bunsen-docs
