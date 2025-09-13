@@ -140,6 +140,11 @@ D[1] .config/conky/possible_subdir/MySpecial-conky.conf
 Tint2
 =====
 
+NOTE: from BunsenLabs Carbon, tint2 has been replaced by xfce4-panel.
+Tint2 is still available for install from the Debian Trixie repositories,
+and the tint2 tools are still shipped in bunsen-utilities.
+
+
 There is a smaller set of tint2 management tools, and they work like the conky tools.
 
 
