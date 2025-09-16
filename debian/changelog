@@ -1,3 +1,10 @@
+bunsen-docs (13.1-1) carbon; urgency=medium
+
+  * helpfile-conkytint2-manager.txt: add note 
+     that tint2 has been replaced by xfce4-panel
+
+ -- John Crawley <john@bunsenlabs.org>  Tue, 16 Sep 2025 16:06:19 +0900
+
 bunsen-docs (13.0-1+test1) carbon; urgency=medium
 
   * version bump for testing
